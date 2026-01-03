@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # Configure API key (consider using environment variables for production)
-genai.configure(api_key="AIzaSyC2ZgR-NDrPvcN4oso75d3wkmoBpVMNVs4")
+genai.configure(api_key="enter ur api key")
 
 # Initialize the model
 def setup_model():
@@ -49,4 +49,5 @@ if prompt := st.chat_input("Type your message here..."):
             st.markdown(response.text)
     
     # Add AI response to chat history
+
     st.session_state.messages.append({"role": "ai", "content": response.text})
